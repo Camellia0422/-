@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../党建首页/02.css">
+   
+    <title>党建活动风采</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            bottom: 0;
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(170, 190, 250, 0.404)
+        }
+
+        .shell {
+            width: 900px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            border: 10px #fff solid;
+            box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .images {
+            width: 300%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            left: 0;
+            transition: .2s;
+        }
+
+        .img {
+            width: 100%;
+            background-size: cover;
+        }
+
+        .img:nth-child(1) {
+            background-image: url("01.jpg");
+            
+        }
+
+        .img:nth-child(2) {
+            background-image: url("02.jpg");
+        }
+
+        .img:nth-child(3) {
+            background-image: url("03.jpg");
+        }
+
+        .min-images {
+            display: flex;
+            justify-content: space-evenly;
+            position: absolute;
+            bottom: 20px;
+            width: 40%;
+            z-index: 999;
+            right: 10%;
+        }
+
+        .min {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            border-radius: 50%;
+            background-size: cover;
+            border: solid rgba(220, 196, 196, 0.5) 5px;
+            background-position: -20px 0;
+        }
+
+        .min:nth-child(1) {
+            background-image: url("01.jpg");
+        }
+
+        .min:nth-child(2) {
+            background-image: url("02.jpg");
+        }
+
+        .min:nth-child(3) {
+            background-image: url("03.jpg");
+        }
+
+        .button {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .button-left{
+            font-size: 50px;
+            background: linear-gradient(to right, rgb(128, 26, 26), rgba(225, 204, 204, 0));
+            padding: 0 20px;
+            cursor: pointer;
+            line-height: 500px;
+        }
+        .button-right{
+            font-size: 50px;
+            background: linear-gradient(to left, rgb(128, 23, 23), rgba(225, 222, 222, 0));
+            padding: 0 20px;
+            cursor: pointer;
+            line-height: 500px;
+        }
+
+        body {
+            background-image: url('./新壁纸.jpg');
+            background-size: cover;
+            /* 让背景图片铺满整个页面 */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+
+        <div class="wrap">
+            <ul>
+                <li ><a href="../党建首页/主页.html">首页</a></li>
+                <li><a href="../党建介绍页面/党建介绍.html">党建介绍</a> </li>
+                <li class="nav-active"><a href="#">活动风采</a> </li>
+                <li><a href="../党建活动日历/index.html">活动日历</a> </li>
+                <li><a href="../gzfk/gzfk/src/main/webapp/index.html">工作反馈</a></li>
+                <li class="libt"><a href="http://localhost:92/dlweb/login.html">党务系统 </a>
+                <li><a href="http://localhost:81/rl/rl.html">回函处理</a> </li>
+                <li><a href="http://localhost:82/CCA/cca.html">公区打扫</a> </li>
+                <li><a href="https://htp.gdzyz.cn/">志愿活动</a> </li>
+                <li><a href="../组织部/zzb.html">组织部</a> </li>
+                <li><a href="../宣传部/xcb.html">宣传部</a> </li>
+                <li><a href="../新闻中心/xwzx.html">新闻中心</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="shell">
+        <ui class="images">
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+        </ui>
+        <ui class="min-images">
+            <a href="https://mp.weixin.qq.com/s?__biz=MzI4MjY3MDA5Ng==&mid=2247580843&idx=1&sn=43893a512f79e7d4d8c4172a96cc23a5&chksm=eb9599d4dce210c25be692f13a2bbbf33fb167870f86ece98e6b696d8e55a9788eae5707167a&scene=126&sessionid=0&subscene=0&clicktime=1701175557&enterid=1701175557&ascene=3&devicetype=iOS17.1.1&version=18002b2e&nettype=3G+&abtest_cookie=AAACAA%3D%3D&lang=zh_CN&countrycode=CN&fontScale=100&exportkey=n_ChQIAhIQnBAohoJcB%2BY%2Bk1W0Ri47BhLbAQIE97dBBAEAAAAAAEqiD6Udoo0AAAAOpnltbLcz9gKNyK89dVj0%2B%2B7pGpJ8WCwzt30l7%2B9L0v6ImtHixNkL4%2BzsfB%2BadNwenbY36RL%2FDrdVV%2FU%2FJufQJHP%2BXKIYWDDej3Fuxv0OTfD0Sr7gNpbjgrR3oKBNsETugtmaazUGQonvSR%2BWY9SwRNUVe41G46G8trkH4kkUz4hTV6cUnxXUul22il6FzofCjsVSXCZprKpWODjZBJ8ElTvsrx6kjBTuoebDRPTl0LRuLY03H3EREp0SQsSudjAptsdugg%3D%3D&pass_ticket=ZzETMTpiILKlN72FIKuejRCR7Xs9%2Bmqbhcw0xuFA7VBMxc2wwJ4OKKUc7ktJATSUnJW8hMPQl19l1I%2BbUvjTMQ%3D%3D&wx_header=3"
+                <li class="min"></li></a>
+            <a href="https://mp.weixin.qq.com/s?__biz=MzI4MjY3MDA5Ng==&mid=2247579489&idx=1&sn=2449e44d8e00d2f0753f5e2b6d2c2726&chksm=eb95921edce21b08c9ea97ccf75ae6ab85c7811ae31df06f519626a346f0adb57bda9a52f243&scene=126&sessionid=0&subscene=0&clicktime=1701177992&enterid=1701177992&ascene=3&devicetype=iOS17.1.1&version=18002b2e&nettype=3G+&abtest_cookie=AAACAA%3D%3D&lang=zh_CN&countrycode=CN&fontScale=100&exportkey=n_ChQIAhIQJ90bLR%2BbCu1p%2BeZSwwAV6xLbAQIE97dBBAEAAAAAADZFL01R0sIAAAAOpnltbLcz9gKNyK89dVj0J3zE%2BdOY85SUibLCR34I1A3FqmOWxCPJlGfevTSYdEy26UiXaUpYOvIYRjDyLpX1bOPBPJG33OFuSmtocS3o0ckrgSdzGKUcKLQmFy6Xj6j56VhMH7IWu9D8djYSXRE2gom35owDqQKwVNwrTEtxjjpfTQg1PadB%2Bwx1PSUh%2B7YXWnvHTOruc22CIWUA3y1ztQSTd2ruwHIevudoN90sxTEKFYCeERz%2BPPxTFKWFvh6pa%2BwzeQ%3D%3D&pass_ticket=ZzETMTpiILKlN72FIKuejRCR7Xs9%2Bmqbhcw0xuFA7VCN8kvfZXvS47hB4zZ0zUcHxOO7Na4jRkzviLPhk8JMVA%3D%3D&wx_header=3"
+                <li class="min"></li></a>
+            <a href="https://mp.weixin.qq.com/s?__biz=MzI4MjY3MDA5Ng==&mid=2247579393&idx=1&sn=4bb883ab39ee9172e2669f5a6864da97&chksm=eb95927edce21b6805f196043b80771f8fe68346ca7e59cf937a9d933df02d678d2c51bed42e&scene=126&sessionid=0&subscene=0&clicktime=1701177999&enterid=1701177999&ascene=3&devicetype=iOS17.1.1&version=18002b2e&nettype=3G+&abtest_cookie=AAACAA%3D%3D&lang=zh_CN&countrycode=CN&fontScale=100&exportkey=n_ChQIAhIQNW9L6EgnDEQ44bdtOr9KeRLbAQIE97dBBAEAAAAAAIPmMoBKA9AAAAAOpnltbLcz9gKNyK89dVj00lnf%2BlpgHkhkryG83ThcdW8ajcwM8XyHhoQkzV64Z9YCdsBaUkuiKgVLHJFdO5KsG15YOZORi1zNSgWJJou11wkoE0WfU0nDXqZZ9fQBTToW%2BoHYZ8tSR2Qb1q%2FXXoY76WbYyJozXXFYDYy%2F64GeiPg3Jx9O0qG%2FkB22pGq%2BSzpioBfwHv04AenkEuHf8CeZY4NSBm2JdAzb68cCTYA2nct9%2FIDCqfI37vHpWhOOntzP51dhQg%3D%3D&pass_ticket=ZzETMTpiILKlN72FIKuejRCR7Xs9%2Bmqbhcw0xuFA7VAlxGsU2TggA59RLp4xdiObVLFzkAdo4I1Sl5nOwnYBzw%3D%3D&wx_header=3"
+                <li class="min"></li></a>
+        </ui>
+        <div class="button">
+            <div class="button-left"> < </div>
+                    <div class="button-right">></div>
+            </div>
+        </div>
+
+       
+</body>
+<script>
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let min = document.querySelectorAll(".min")
+    let images = document.querySelector(".images")
+    // 设置一个index用来计算和控制图片的位置，再设置一个time作为定时器
+    let index = 0
+    let time
+    // 创建一个position为复用函数，作用就是结合index来定义当前图片的位置的
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+    //创建一个复用函数add为加函数，如果当前图片的位置值index大于等于当前图片数量的话，就说明超出了计算范围，所以得清零，如若不然index就加一
+    function add() {
+        if (index >= min.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    // 反之desc为减函数，如果当前图片的位置值index小于1了，那么他的值就反弹到最顶端，也就是轮播图的最后面，如若不然index就减一
+    function desc() {
+        if (index < 1) {
+            index = min.length - 1
+        } else {
+            index--
+        }
+    }
+    // 创建一个timer来当做复用时间的函数，，每隔3秒钟index就加一，然后加入增加add函数和desc函数来判断一下，再加入定位函数
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 3000)
+    }
+    // 设置一下按钮，left为左边的按钮，因为点击时图片会反方向倒退，所以我们套入desc减函数进去，顺便定位一下
+    // 点击的时候必须先把定时器给停掉再重新执行一遍，不然会在你点击下一张图片时，定时器倒计时一到也跟着生效，这样子就会连跳两张图片了
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    // 右边的按钮和左边也是差不多
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    // 在弄好左右两个按钮的时候，需要生效下面的小图片按钮，
+    // 先遍历一遍，然后获取当前点击的那个小图片按钮的值并赋值给index，这样子就可以随之跳转
+    for (let i = 0; i < min.length; i++) {
+        min[i].addEventListener("click", () => {
+            index = i
+            position()
+            clearInterval(time)
+            timer()
+        })
+    }
+
+    timer()
+</script>
+
+</html>
