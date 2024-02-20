@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../党建首页/02.css">
+    <link rel="stylesheet" href="../党建首页/001.css">
+    <link rel="stylesheet" href="../党建首页/01.css">
+    <title>党建日历</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="nav">
+        <div class="wrap">
+            <ul>    
+                <li><a href="../党建首页/主页.html">首页</a></li>
+                <li><a href="../党建介绍页面/党建介绍.html">党建介绍</a></li>
+                <li><a href="../党建活动风采/党建活动页面.html">活动风采</a></li>
+                <li class="nav-active"><a href="../党建活动日历/index.html">活动日历</a></li>
+                <li><a href="../gzfk/gzfk/src/main/webapp/index.html">工作反馈</a></li>
+                <li class="libt"><a href="http://localhost:92/dlweb/login.html">党务系统</a></li>
+                <li><a href="http://localhost:81/rl/rl.html">回函处理</a></li>
+                <li><a href="http://localhost:82/CCA/cca.html">公区打扫</a></li>
+                <li><a href="https://htp.gdzyz.cn/">志愿活动</a></li>
+                <li><a href="../组织部/zzb.html">组织部</a></li>
+                <li><a href="../宣传部/xcb.html">宣传部</a></li>
+                <li><a href="../新闻中心/xwzx.html">新闻中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="calendar">
+        <div class="date">
+            <h3>December</h3>
+            <div class="days">
+                <div class="day">S</div>
+                <div class="day">M</div>
+                <div class="day">T</div>
+                <div class="day">W</div>
+                <div class="day">T</div>
+                <div class="day">F</div>
+                <div class="day">S</div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number">1</div>
+                <div class="number">2</div>
+                <div class="number" id="currentDay">3</div>
+                <div class="number">4</div>
+                <div class="number">5</div>
+                <div class="number">6</div>
+                <div class="number">7</div>
+                <div class="number">8</div>
+                <div class="number">9</div>
+                <div class="number">10</div>
+                <div class="number">11</div>
+                <div class="number">12</div>
+                <div class="number">13</div>
+                <div class="number">14</div>
+                <div class="number">15</div>
+                <div class="number">16</div>
+                <div class="number">17</div>
+                <div class="number">18</div>
+                <div class="number">19</div>
+                <div class="number">20</div>
+                <div class="number">21</div>
+                <div class="number">22</div>
+                <div class="number">23</div>
+                <div class="number">24</div>
+                <div class="number">25</div>
+                <div class="number">26</div>
+                <div class="number">27</div>
+                <div class="number">28</div>
+                <div class="number">29</div>
+                <div class="number">30</div>
+                <div class="number">31</div>
+            </div>
+        </div>
+        <div class="img">
+            <img src="背景图.jpg" alt="Error" id="eventImage">
+            <center id="eventText">
+                <!-- 文字内容在这里动态更新 -->
+            </center>    
+        </div>
+    </div>
+
+    <script>
+        // 使用JavaScript获取当前系统日期
+        var currentDate = new Date();
+        var currentDay = currentDate.getDate();
+        var numbers = document.getElementsByClassName("abc");
+
+        // 设置当前日期的样式为active
+        var numbers = document.getElementsByClassName("number");
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i].innerHTML == currentDay) {
+                numbers[i].classList.add("active");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+    var numbers = document.getElementsByClassName("number");
+    for (var i = 0; i < numbers.length; i++) {
+        numbers[i].addEventListener('click', function() {
+            // 移除之前选中的日期的 active 类
+            var current = document.getElementsByClassName("abc");
+            if (current.length > 0) { 
+                current[0].className = current[0].className.replace(" abc", "");
+            }
+            // 添加 active 类到新选中的日期
+            this.className += " abc";
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var numbers = document.getElementsByClassName("number");
+    var eventImage = document.getElementById("eventImage");
+    var eventText = document.getElementById("eventText");
+
+    // 特定日期的图片和文字映射
+    var specialEvents = {
+        '3': {
+            img: '普法决赛.jpg',
+            text: '普法修德守纪演讲比赛'
+        },
+        '15': {
+            img: '阅江楼.jpg',
+            text: '阅江楼志愿活动'
+        },
+        '17': {
+            img: '公区打扫.jpg',
+            text: '公区打扫活动'
+        },
+        '20':{
+            img:'入党积极分子考试.jpg',
+            text:'入党积极分子考试'
+        },
+        '21': {
+            img: '消防队志愿.jpg',
+            text: '消防队志愿活动'
+        },
+
+        '25':{
+            img: '预备支部大会.png',
+            text: '拟吸收预备党员支部大会'
+        },
+        '30': {
+            img: '阅江楼.jpg',
+            text: '阅江楼志愿活动'
+        },
+
+    };
+
+    for (var i = 0; i < numbers.length; i++) {
+        numbers[i].addEventListener('click', function() {
+            // 获取点击的日期
+            var clickedDay = this.textContent || this.innerText;
+
+            // 移除之前选中的日期的 active 类
+            var current = document.querySelector(".number.abc");
+            if (current) { 
+                current.classList.remove("abc");
+            }
+
+            // 添加 active 类到新选中的日期
+            this.classList.add("abc");
+
+            // 检查是否是特定日期并更新图片和文字
+            if (specialEvents[clickedDay]) {
+                eventImage.src = specialEvents[clickedDay].img;
+                eventText.innerHTML = specialEvents[clickedDay].text;
+            } else {
+                // 如果不是特定日期，显示默认图片和文字
+                eventImage.src = '背景图.jpg';
+                eventText.innerHTML = '今天没有特殊的活动哦'; // 或者设置为默认文字
+            }
+        });
+    }
+});
+
+
+    </script>
+</body>
+</html>

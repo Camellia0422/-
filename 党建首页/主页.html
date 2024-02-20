@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>当务之急</title>
+    <link rel="icon" href="页面图标图片.jpg">
+    <link rel="stylesheet" href="01.css">
+    <link rel="stylesheet" href="02.css">
+    <link rel="stylesheet" href="001.css">
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/da-slider.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        ul {
+  text-decoration: none; /* 去掉下划线 */
+  color: #000; /* 修改颜色为黑色 */
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+
+        <div class="wrap">
+            <ul>
+                <li class="nav-active"><a href="#">首页</a></li>
+                <li><a href="../党建介绍页面/党建介绍.html">党建介绍</a> </li>
+                <li><a href="../党建活动风采/党建活动页面.html">活动风采</a> </li>
+                <li><a href="../党建活动日历/index.html">活动日历</a> </li>
+                <li><a href="../gzfk/gzfk/src/main/webapp/index.html">工作反馈</a>
+                <li class="libt"><a href="http://localhost:92/dlweb/login.html">党务系统 </a>
+                <li><a href="http://localhost:81/rl/rl.html">回函处理</a> </li>
+                </li>
+                </li>
+                
+                <li><a href="http://localhost:82/CCA/cca.html">公区打扫</a> </li>
+                <li><a href="https://htp.gdzyz.cn/">志愿活动</a> </li>
+                <li><a href="../组织部/zzb.html">组织部</a> </li>
+                <li><a href="../宣传部/xcb.html">宣传部</a> </li>
+                <li><a href="../新闻中心/xwzx.html">新闻中心</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-img"><img src="党建页面轮播图01.jpg" width="1570" height="660"> </div>
+        <div class="box-img"><img src="党建页面轮播图02.jpg" width="1570" height="660"></div>
+        <div class="box-img"><img src="党建页面轮播图03.jpg" width="1570" height="660"></div>
+        <div class="box-img"><img src="./党建页面轮播图04.png" width="1570" height="660"></div>
+        <div class="box-img"><img src="党建页面轮播图03.jpg" width="1570" height="660"></div>
+        <div class="box-img"><img src="党建页面轮播图02.jpg" width="1570" height="660"></div>
+
+        <div class="box-left">
+            &lt;
+        </div>
+        <div class="box-right">
+            &gt;
+        </div>
+        <div class="box-zhiding">
+            <ul>
+                <li class="botton"></li>
+                <li class="botton"></li>
+                <li class="botton"></li>
+                <li class="botton"></li>
+                <li class="botton"></li>
+                <li class="botton"></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var index = 0;
+        var f;
+        dingshiqi();
+
+        function dingshiqi() {
+            f = setInterval(function () {
+
+                if (index == $(".box-img").length - 1) {
+                    index = 0;
+                    $(".box-img").css("opacity", "0");
+                    $(".box-img").eq(index).css("opacity", "1");
+
+                    $(".botton").css("background-color", "#ccc");
+                    $(".botton").eq(index).css("background-color", "#fff");
+                    dingshiqi();
+                } else {
+                    index++;
+                    $(".box-img").css("opacity", "0");
+                    $(".box-img").eq(index).css("opacity", "1");
+
+                    $(".botton").css("background-color", "#ccc");
+                    $(".botton").eq(index).css("background-color", "#fff");
+                    dingshiqi();
+                }
+            }, 4000)
+        }
+
+        $(".box-left").click(function () {
+            clearInterval(f);
+            if (index == 0) {
+                index = $(".box-img").length - 1;
+
+                $(".box-img").css("opacity", "0");
+                $(".box-img").eq(index).css("opacity", "1");
+
+                $(".botton").css("background-color", "#ccc");
+                $(".botton").eq(index).css("background-color", "#fff");
+            } else {
+                index--;
+                $(".box-img").css("opacity", "0");
+                $(".box-img").eq(index).css("opacity", "1");
+
+                $(".botton").css("background-color", "#ccc");
+                $(".botton").eq(index).css("background-color", "#fff");
+            }
+        })
+        $(".box-right").click(function () {
+            clearInterval(f);
+            if (index == $(".box-img").length - 1) {
+                index = 0;
+                $(".box-img").css("opacity", "0");
+                $(".box-img").eq(index).css("opacity", "1");
+
+                $(".botton").css("background-color", "#ccc");
+                $(".botton").eq(index).css("background-color", "#fff");
+                dingshiqi();
+            } else {
+                index++;
+                $(".box-img").css("opacity", "0");
+                $(".box-img").eq(index).css("opacity", "1");
+
+                $(".botton").css("background-color", "#ccc");
+                $(".botton").eq(index).css("background-color", "#fff");
+                dingshiqi();
+            }
+
+        })
+        $(".botton").click(function () {
+            clearInterval(f);
+            var indexx = $(this).index();
+            index = indexx;
+            $(".box-img").css("opacity", "0");
+            $(".box-img").eq(index).css("opacity", "1");
+
+            $(".botton").css("background-color", "#ccc");
+            $(".botton").eq(index).css("background-color", "#fff");
+            dingshiqi();
+        })
+
+
+    })
+</script>
+
+
+
+
+
+
+    <section class="container">
+        <div class="heading">
+            <!-- Heading -->
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+
+            <h2>关于党建服务中心</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="介绍图片.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-md-8">
+                <p>
+                <p>欢迎来到我们信息技术学院的党建服务中心！我们是学校为加强党的组织建设和发挥党员先锋模范作用而设立的重要机构。</p>
+
+                <p>党建服务中心拥有一支专业、高效的工作团队，他们具备丰富的党务管理经验和深厚的理论基础。他们积极组织开展各类党建活动，包括培训学习、理论研讨、组织生活等，以不断提高党员干部的政治素质和党性修养。</p>
+
+                <p>党建服务中心也是党员之间交流互动的重要平台。中心定期组织党员座谈会、经验交流会等活动，鼓励党员们相互交流经验、分享学习成果，并提供咨询和指导服务，帮助党员解决在工作和学习中遇到的问题。</p>
+
+                <p>
+                    在我们的网页上，您可以获得以下服务和内容：
+                <p>- 党建动态：我们定期发布党建工作的最新动态和政策解读，及时传达党委的决策精神，帮助党员了解学校党建工作的最新进展。</p>
+                <p>- 学习资源：我们提供丰富的学习资源，包括党的理论知识、党史党章、重要讲话等。您可以在线学习，提高自身的政治素质和党性修养。</p>
+                <p>- 活动通知：我们发布各类党建活动的通知和报名信息，包括培训学习、座谈交流、志愿者活动等。您可以及时了解并参与感兴趣的活动。</p>
+                <p>- 在线交流：我们提供在线交流平台，让党员之间可以互相交流、分享学习成果和经验。您可以发表观点、提出问题，与其他党员一起讨论和思考。</p>
+                <p>- 党组织管理：我们建立了党组织管理平台，方便党支部进行组织生活、党费管理等工作。党员可以在线完成各项党务手续，提高工作效率。</p>
+                </p>
+
+
+                </p>
+
+                <blockquote class="blockquote-1">
+                    <p>为促进党的组织建设和发挥党员先锋模范作用，提供全方位的党务服务和支持。</p>
+                    <small>党建服务中心 <cite title="Source Title"></cite></small>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="#">首页</a> |
+                                <a href="../党建介绍页面/党建介绍.html">党建介绍</a> |
+                                <a href="../党建活动风采/党建活动页面.html">活动风采</a> |
+                                <a href="../党建活动日历/index.html">活动日历</a> |
+                                <a href="../gzfk/gzfk/src/main/webapp/index.html">工作反馈</a> |
+                                <a href="http://localhost:92/dlweb/login.html">党务系统</a> |
+                                <a href="http://localhost:81/rl/rl.html">回函处理</a> |
+                                <a href="http://localhost:82/CCA/cca.html">公区打扫</a> |
+                                <a href="https://htp.gdzyz.cn/">志愿活动</a> |
+                                <a href="../组织部/zzb.html">组织部</a> |
+                                <a href="../宣传部/xcb.html">宣传部</a> |
+                                <a href="../新闻中心/xwzx.html">新闻中心</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">
+                                Copyright &copy; 2023.最终解释权归党建服务中心所有
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

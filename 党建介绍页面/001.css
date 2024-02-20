@@ -1,0 +1,79 @@
+.box{
+    width: 1000px;
+    height: 460px;
+    position: relative;
+}
+.box-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+opacity: 0;
+transition: all 3s;
+}
+.box-img:nth-child(1){
+    opacity: 1;
+}
+.box-left{
+   position: absolute;
+    width: 35px;
+    height: 70px;
+
+color: #ccc;
+top: 300px;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 27px;
+}
+.box-left:hover{
+    background-color: #00000050;
+    color: #fff;
+}
+.box-right{
+    position: absolute;
+    width: 35px;
+    height: 70px;
+
+    color: #ccc;
+    top: 300px;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 27px;
+    right: -550px;
+}
+.box-right:hover{
+    background-color: #00000050;
+    color: #fff;
+}
+.box-zhiding>ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+/*控制圆点外形*/
+.box-zhiding li{
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #ccc;
+float: left;
+    margin-right: 10px;
+}
+.box-zhiding li:hover{
+    background-color: #fff;
+}
+.box-zhiding li:nth-child(1){
+    background-color: #fff;
+}
+/*控制按钮位置*/
+.box-zhiding{
+    position: absolute;
+    bottom: -150px;
+    right: -300px;
+}
+
+
+
+
